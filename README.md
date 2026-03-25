@@ -1,43 +1,77 @@
-# Astro Starter Kit: Minimal
+# Weng Khong Lim — Personal Website
 
-```sh
-npm create astro@latest -- --template minimal
+This repository contains the source code for my personal academic website:
+
+👉 https://wengkhong.github.io/
+
+## Overview
+
+This site presents my work in:
+- Clinical genomics
+- Variant interpretation
+- Population genomics (SG10K / SG100K)
+- AI-driven computational methods in medicine
+
+The goal is to provide a clear, concise, and professional overview of my research, tools, and contributions.
+
+## Tech Stack
+
+- Astro (static site generator)
+- Markdown content
+- GitHub Pages (deployment)
+
+## Structure
+src/
+- pages/
+- - index.astro
+- - about.astro
+- - research.astro
+- - publications.astro
+- - tools.astro
+- - grants.astro
+- - talks.astro
+- - contact.astro
+- layouts/
+- - MainLayout.astro
+- styles/
+- - global.css
+
+## Theme Notes
+- Minimal academic visual direction
+- Light mode only
+- Shared layout/navigation across all pages
+- Typography-first and content-first hierarchy
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+Run locally:
+```bash
+npm run dev
+```
+Build site:
+```bash
+npm run build
+```
+Preview build:
+```bash
+npm run preview
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Deployment
 
-## 🚀 Project Structure
+Deployment is handled via GitHub Actions.
+- Push to main branch triggers build
+- Output is deployed to GitHub Pages
 
-Inside of your Astro project, you'll see the following folders and files:
+## Notes
+- Keep content concise and high-signal
+- Avoid unnecessary visual complexity
+- Prioritise clarity for collaborators, clinicians, and funders
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## License
+- MIT (or adjust as needed)

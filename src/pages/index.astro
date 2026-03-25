@@ -1,17 +1,137 @@
 ---
-
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout
+	title="Weng Khong Lim, PhD"
+	description="Computational methods and clinical workflows translating genome sequencing into actionable diagnoses."
+>
+	<section class="hero">
+		<p class="eyebrow">Home</p>
+		<h1>Weng Khong Lim, PhD</h1>
+		<ul class="role-list">
+			<li>Associate Professor, Duke-NUS Medical School</li>
+			<li>Principal Scientist, Genome Institute of Singapore</li>
+			<li>Director of Bioinformatics, Genomic Medicine Centre (SingHealth Duke-NUS)</li>
+		</ul>
+		<p class="lead">
+			I develop computational methods and clinical workflows to translate genome sequencing into
+			actionable diagnoses.
+		</p>
+		<p class="lead">
+			Work spans clinical genomics, SG10K/SG100K-scale population sequencing, AI-assisted variant
+			interpretation, and functional validation of uncertain variants.
+		</p>
+		<div class="cta-row">
+			<a class="button-link primary" href="/publications">View Publications</a>
+			<a class="button-link secondary" href="/research">View Research</a>
+			<a class="button-link secondary" href="/contact">Contact</a>
+		</div>
+	</section>
+
+	<section class="metrics-grid" aria-label="Research highlights">
+		<article class="metric">
+			<span class="metric-value">9,000+</span>
+			<span class="metric-label">Asian genomes analyzed</span>
+		</article>
+		<article class="metric">
+			<span class="metric-value">3</span>
+			<span class="metric-label">Current institutional roles</span>
+		</article>
+		<article class="metric">
+			<span class="metric-value">2</span>
+			<span class="metric-label">National-scale programs (SG10K, SG100K)</span>
+		</article>
+		<article class="metric">
+			<span class="metric-value">2022</span>
+			<span class="metric-label">Nature Communications anchor publication</span>
+		</article>
+	</section>
+
+	<section class="section">
+		<div class="section-header">
+			<h2>Key Contributions</h2>
+		</div>
+		<div class="grid two">
+			<article class="card">
+				<h3>Clinical Genomics Implementation</h3>
+				<p>
+					Built and deployed bioinformatics pipelines supporting rare disease diagnosis and national
+					genomic programs.
+				</p>
+			</article>
+
+			<article class="card">
+				<h3>Population Genomics (SG10K / SG100K)</h3>
+				<p>
+					Led analysis of large-scale Asian genome datasets to improve variant interpretation and disease
+					risk prediction.
+				</p>
+			</article>
+
+			<article class="card">
+				<h3>AI for Variant Interpretation</h3>
+				<p>
+					Developing automated frameworks to prioritise and interpret variants of uncertain significance
+					(VUS) using computational and language models.
+				</p>
+			</article>
+
+			<article class="card">
+				<h3>Translational Impact</h3>
+				<p>
+					Focus on closing the gap between sequencing and diagnosis, particularly in rare disease and
+					clinical genetics.
+				</p>
+			</article>
+		</div>
+	</section>
+
+	<section class="section card">
+		<div class="section-header">
+			<h2>Selected Work</h2>
+		</div>
+		<ul class="list-plain">
+			<li>
+				<em>Nature Communications (2022)</em> - Analysis of clinically relevant variants in 9,000+ Asian
+				genomes.
+			</li>
+			<li>Development of automated ACMG variant interpretation frameworks.</li>
+			<li>Clinical bioinformatics pipelines supporting rare disease diagnostics.</li>
+			<li>Functional genomics approaches for resolving uncertain variants.</li>
+		</ul>
+		<div class="cta-row">
+			<a class="button-link primary" href="/publications">Publications</a>
+			<a class="button-link secondary" href="/research">Research</a>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="section-header">
+			<h2>Current Focus</h2>
+		</div>
+		<div class="grid two">
+			<article class="card">
+				<ul class="list-plain">
+					<li>AI-assisted variant prioritisation and interpretation</li>
+					<li>Integration of population genomics into clinical workflows</li>
+				</ul>
+			</article>
+			<article class="card">
+				<ul class="list-plain">
+					<li>Functionalisation of variants of uncertain significance</li>
+					<li>Scaling genomic medicine in healthcare systems</li>
+				</ul>
+			</article>
+		</div>
+	</section>
+
+	<section class="section card">
+		<h2>Links</h2>
+		<div class="cta-row">
+			<a class="button-link secondary" href="https://scholar.google.com/citations?user=8lU-rEkAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+			<a class="button-link secondary" href="https://github.com/wengkhong" target="_blank" rel="noopener noreferrer">GitHub</a>
+			<a class="button-link secondary" href="/contact">Contact</a>
+		</div>
+	</section>
+</MainLayout>

@@ -1,0 +1,83 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+interface NavItem {
+  href: string;
+  label: string;
+}
+
+const { title, description = "Personal academic website of Weng Khong Lim" } = Astro.props as Props;
+
+const navItems: NavItem[] = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/research", label: "Research" },
+  { href: "/publications", label: "Publications" },
+  { href: "/tools", label: "Tools" },
+  { href: "/grants", label: "Grants" },
+  { href: "/talks", label: "Talks" },
+  { href: "/contact", label: "Contact" }
+];
+
+const currentPath = Astro.url.pathname;
+const current = (href: string) => (currentPath === href ? "page" : undefined);
+const isMoreActive =
+  currentPath === "/tools" ||
+  currentPath === "/grants" ||
+  currentPath === "/talks";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.ico" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header">
+      <div class="site-shell site-header-inner">
+        <a class="site-brand" href="/">Weng Khong Lim, PhD</a>
+        <nav class="site-nav" aria-label="Primary">
+          <a href={navItems[0].href} aria-current={current(navItems[0].href)}>{navItems[0].label}</a>
+          <a href={navItems[2].href} aria-current={current(navItems[2].href)}>{navItems[2].label}</a>
+          <a href={navItems[3].href} aria-current={current(navItems[3].href)}>{navItems[3].label}</a>
+          <a href={navItems[7].href} aria-current={current(navItems[7].href)}>{navItems[7].label}</a>
+          <details class="nav-more" data-active={isMoreActive ? "true" : "false"}>
+            <summary>More</summary>
+            <div class="nav-more-list">
+              <a href={navItems[1].href} aria-current={current(navItems[1].href)}>{navItems[1].label}</a>
+              <a href={navItems[4].href} aria-current={current(navItems[4].href)}>{navItems[4].label}</a>
+              <a href={navItems[5].href} aria-current={current(navItems[5].href)}>{navItems[5].label}</a>
+              <a href={navItems[6].href} aria-current={current(navItems[6].href)}>{navItems[6].label}</a>
+            </div>
+          </details>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="site-shell">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-shell">
+        <p>
+          Computational genomics, clinical translation, and population-scale sequencing.
+        </p>
+        <p>
+          <a href="/publications">Publications</a> · <a href="/research">Research</a> · <a href="/contact">Contact</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
