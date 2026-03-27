@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="96" viewBox="0 0 420 96" role="img" aria-labelledby="title desc">
+  <title id="title">SingHealth Duke-NUS Academic Medical Centre</title>
+  <desc id="desc">Clean white-background logo badge for SingHealth Duke-NUS Academic Medical Centre.</desc>
+  <rect x="0" y="0" width="420" height="96" rx="14" fill="#ffffff"/>
+
+  <g fill="none" stroke="#f26f21" stroke-linecap="round">
+    <path d="M30 26 C 70 12, 98 10, 140 6" stroke-width="6"/>
+    <path d="M28 35 C 72 20, 102 18, 146 14" stroke-width="5"/>
+  </g>
+
+  <text x="28" y="58" font-family="Avenir Next, Trebuchet MS, Segoe UI, Arial, sans-serif" font-size="22" font-weight="500" fill="#1b1f23">SingHealth</text>
+  <text x="198" y="58" font-family="Avenir Next, Trebuchet MS, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#1f4b8f">Duke</text>
+  <text x="253" y="58" font-family="Avenir Next, Trebuchet MS, Segoe UI, Arial, sans-serif" font-size="22" font-weight="700" fill="#f26f21">NUS</text>
+  <text x="28" y="79" font-family="Avenir Next, Trebuchet MS, Segoe UI, Arial, sans-serif" font-size="14" letter-spacing="0.16em" fill="#5a646d">ACADEMIC MEDICAL CENTRE</text>
+</svg>

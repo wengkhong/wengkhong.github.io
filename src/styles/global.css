@@ -203,12 +203,54 @@ main {
 }
 
 .hero {
+  position: relative;
+  overflow: hidden;
   margin-bottom: var(--spacing-6);
   padding: clamp(1.1rem, 2.3vw, 2rem);
   background: linear-gradient(120deg, rgba(255, 255, 255, 0.95), rgba(250, 248, 241, 0.86));
   border: 1px solid var(--border);
   border-radius: calc(var(--radius) + 6px);
   box-shadow: var(--shadow);
+}
+
+.hero-motif {
+  position: absolute;
+  right: -1.6rem;
+  bottom: -2.8rem;
+  width: clamp(280px, 38vw, 460px);
+  height: auto;
+  opacity: 0.28;
+  pointer-events: none;
+}
+
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-5);
+}
+
+.hero-text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.hero-photo-wrap {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 0.25rem;
+}
+
+.hero-photo {
+  width: clamp(140px, 16vw, 200px);
+  height: clamp(140px, 16vw, 200px);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--border);
+  box-shadow: 0 4px 16px rgba(15, 76, 92, 0.13);
 }
 
 .eyebrow {
@@ -245,6 +287,41 @@ main {
   background: var(--surface-soft);
   font-size: 0.84rem;
   color: #33404a;
+}
+
+.affiliation-logos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0.45rem 0 var(--spacing-3);
+  align-items: center;
+}
+
+.affiliation-logo {
+  width: 136px;
+  height: 46px;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid #d8d8d1;
+  background-color: #ffffff;
+  object-fit: contain;
+  object-position: center;
+  padding: 0.28rem 0.55rem;
+  box-shadow: 0 3px 10px rgba(15, 76, 92, 0.08);
+}
+
+.logo-duke {
+  object-fit: contain;
+}
+
+.logo-gis {
+  object-fit: contain;
+}
+
+.logo-singhealth {
+  object-fit: cover;
+  object-position: center 48%;
+  padding: 0.22rem 0.45rem;
 }
 
 .cta-row {
@@ -368,6 +445,46 @@ main {
 @media (max-width: 900px) {
   body {
     font-size: 17px;
+  }
+
+  .hero-inner {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .hero-motif {
+    right: -4rem;
+    bottom: -4.5rem;
+    width: 320px;
+    opacity: 0.2;
+  }
+
+  .hero-photo-wrap {
+    padding-top: 0;
+  }
+
+  .hero-photo {
+    width: clamp(100px, 28vw, 140px);
+    height: clamp(100px, 28vw, 140px);
+  }
+
+  .affiliation-logo {
+    width: 120px;
+    height: 40px;
+    padding: 0.22rem 0.44rem;
+  }
+
+  .logo-duke {
+    object-fit: contain;
+  }
+
+  .logo-gis {
+    object-fit: contain;
+  }
+
+  .logo-singhealth {
+    object-fit: cover;
+    object-position: center 48%;
   }
 
   .grid.two {

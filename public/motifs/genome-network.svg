@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="360" viewBox="0 0 520 360" role="img" aria-labelledby="title desc">
+  <title id="title">Genomics network motif</title>
+  <desc id="desc">Subtle genomic line and node motif used as a decorative hero background.</desc>
+  <g fill="none" stroke="#0f4c5c" stroke-width="2" opacity="0.25">
+    <path d="M20 44C90 52 120 84 185 116C260 154 332 152 500 96"/>
+    <path d="M28 130C92 138 132 176 197 208C270 244 352 244 496 194"/>
+    <path d="M18 218C82 226 126 262 200 292C278 324 364 326 502 280"/>
+    <path d="M70 34L72 230"/>
+    <path d="M172 72L174 306"/>
+    <path d="M278 90L280 328"/>
+    <path d="M384 82L386 314"/>
+  </g>
+  <g fill="#0f4c5c" opacity="0.42">
+    <circle cx="72" cy="130" r="5"/>
+    <circle cx="174" cy="208" r="5"/>
+    <circle cx="280" cy="154" r="5"/>
+    <circle cx="386" cy="194" r="5"/>
+    <circle cx="280" cy="292" r="5"/>
+    <circle cx="386" cy="96" r="5"/>
+  </g>
+</svg>
