@@ -148,8 +148,8 @@ Single breakpoint at **900px** for mobile layout changes. Keep mobile styles in 
 
 - Light mode only — no dark mode toggle
 - Typography-first hierarchy — let spacing and type weight carry structure
-- Minimal visual chrome — no gradients on components, no heavy shadows
-- The background has a subtle radial gradient applied at `body` level; don't replicate this on components
+- Minimal visual chrome — avoid gradients on most components and avoid heavy shadows; limited exceptions like the homepage `.hero` gradient are acceptable
+- The background has a subtle radial gradient applied at `body` level; don't replicate that treatment broadly across components
 
 ---
 
