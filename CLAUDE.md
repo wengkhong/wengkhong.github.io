@@ -81,12 +81,12 @@ Always use `npm` (not yarn or pnpm). The CI uses `npm ci` with `package-lock.jso
 
 Primary nav (always visible): **Home, Research, Publications, Contact**
 
-Secondary nav (under "More" dropdown): **About, Tools, Grants, Talks**
+Secondary nav (under "More" dropdown): includes **Tools, Grants, Talks**. The **About** page may also appear there in the hardcoded nav, but note that `/about` is not currently included in the `isMoreActive` logic.
 
 This is hardcoded in `MainLayout.astro`. When adding or renaming pages, update:
 1. The `navItems` array in `src/layouts/MainLayout.astro`
 2. The primary nav `<a>` tags in the header (currently `navItems[0]`, `[2]`, `[3]`, `[7]`)
-3. The `isMoreActive` condition if the page goes in the dropdown
+3. The `isMoreActive` condition for any page in the dropdown that should cause "More" to appear active (for example, include `/about` there if that is the intended behavior)
 
 ---
 
