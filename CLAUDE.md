@@ -94,7 +94,7 @@ This is hardcoded in `MainLayout.astro`. When adding or renaming pages, update:
 
 - **One layout to rule them all:** `MainLayout.astro` wraps every page. Props: `title: string`, `description?: string`.
 - **No component library.** Reusable UI (cards, grids, sections) is achieved via CSS classes defined in `global.css`.
-- **Slot pattern:** Each page simply uses `<MainLayout title="..."><content here /></MainLayout>`.
+- **Slot pattern:** Each page simply uses `<MainLayout title="..."><p>...</p></MainLayout>`.
 - **No client-side JS.** All interactivity (dropdown nav uses `<details>/<summary>`) is handled via native HTML/CSS.
 
 ---
