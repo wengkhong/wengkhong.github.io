@@ -24,8 +24,10 @@ const navItems: NavItem[] = [
   { href: "/contact", label: "Contact" }
 ];
 
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const currentPath = Astro.url.pathname;
 const current = (href: string) => (currentPath === href ? "page" : undefined);
+const nav = (href: string) => navItems.find((item) => item.href === href)!;
 const isMoreActive =
   currentPath === "/tools" ||
   currentPath === "/grants" ||
@@ -38,8 +40,20 @@ const isMoreActive =
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalURL} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" href="/favicon.ico" />
     <title>{title}</title>
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={new URL("/WK_Profile.png", Astro.site)} />
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -48,17 +62,17 @@ const isMoreActive =
       <div class="site-shell site-header-inner">
         <a class="site-brand" href="/">Weng Khong Lim, PhD</a>
         <nav class="site-nav" aria-label="Primary">
-          <a href={navItems[0].href} aria-current={current(navItems[0].href)}>{navItems[0].label}</a>
-          <a href={navItems[2].href} aria-current={current(navItems[2].href)}>{navItems[2].label}</a>
-          <a href={navItems[3].href} aria-current={current(navItems[3].href)}>{navItems[3].label}</a>
-          <a href={navItems[7].href} aria-current={current(navItems[7].href)}>{navItems[7].label}</a>
+          <a href={nav("/").href} aria-current={current("/")}>{nav("/").label}</a>
+          <a href={nav("/research").href} aria-current={current("/research")}>{nav("/research").label}</a>
+          <a href={nav("/publications").href} aria-current={current("/publications")}>{nav("/publications").label}</a>
+          <a href={nav("/contact").href} aria-current={current("/contact")}>{nav("/contact").label}</a>
           <details class="nav-more" data-active={isMoreActive ? "true" : "false"}>
             <summary>More</summary>
             <div class="nav-more-list">
-              <a href={navItems[1].href} aria-current={current(navItems[1].href)}>{navItems[1].label}</a>
-              <a href={navItems[4].href} aria-current={current(navItems[4].href)}>{navItems[4].label}</a>
-              <a href={navItems[5].href} aria-current={current(navItems[5].href)}>{navItems[5].label}</a>
-              <a href={navItems[6].href} aria-current={current(navItems[6].href)}>{navItems[6].label}</a>
+              <a href={nav("/about").href} aria-current={current("/about")}>{nav("/about").label}</a>
+              <a href={nav("/tools").href} aria-current={current("/tools")}>{nav("/tools").label}</a>
+              <a href={nav("/grants").href} aria-current={current("/grants")}>{nav("/grants").label}</a>
+              <a href={nav("/talks").href} aria-current={current("/talks")}>{nav("/talks").label}</a>
             </div>
           </details>
         </nav>

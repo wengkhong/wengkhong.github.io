@@ -74,4 +74,4 @@ Deployment is handled via GitHub Actions.
 - Prioritise clarity for collaborators, clinicians, and funders
 
 ## License
-- MIT (or adjust as needed)
+- Apache 2.0 — see [LICENSE](LICENSE)
