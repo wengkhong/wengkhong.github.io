@@ -1,5 +1,10 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+
+const grants = await getCollection("grants");
+const active = grants.filter((g) => g.data.status === "active");
+const completed = grants.filter((g) => g.data.status === "completed");
 ---
 
 <MainLayout
@@ -14,31 +19,37 @@ import MainLayout from "../layouts/MainLayout.astro";
     </p>
   </header>
 
-  <section class="section grid two">
-    <article class="card">
-      <h2>Current Funding Themes</h2>
-      <ul class="list-plain">
-        <li>Clinical genomics implementation programs</li>
-        <li>Population-scale sequencing integration</li>
-        <li>AI-assisted interpretation and decision support</li>
-      </ul>
-    </article>
+  {active.length > 0 && (
+    <section class="section">
+      <div class="section-header">
+        <h2>Active</h2>
+      </div>
+      <div class="grid two">
+        {active.map((grant) => (
+          <article class="card">
+            <h3>{grant.data.title}</h3>
+            <p class="eyebrow">{grant.data.fundingBody}{grant.data.role ? ` · ${grant.data.role}` : ""}</p>
+            {grant.body && <p>{grant.body}</p>}
+          </article>
+        ))}
+      </div>
+    </section>
+  )}
 
-    <article class="card">
-      <h2>Leadership and Collaboration</h2>
-      <ul class="list-plain">
-        <li>Program leadership in SG100K-aligned efforts</li>
-        <li>Cross-institutional projects with clinical partners</li>
-        <li>Bioinformatics capacity building and deployment</li>
-      </ul>
-    </article>
-  </section>
-
-  <section class="section card">
-    <h3>Detailed grant list</h3>
-    <p>
-      A detailed list of active grants, project periods, and leadership roles will be added in the next
-      content update.
-    </p>
-  </section>
+  {completed.length > 0 && (
+    <section class="section">
+      <div class="section-header">
+        <h2>Completed</h2>
+      </div>
+      <div class="grid two">
+        {completed.map((grant) => (
+          <article class="card">
+            <h3>{grant.data.title}</h3>
+            <p class="eyebrow">{grant.data.fundingBody}</p>
+            {grant.body && <p>{grant.body}</p>}
+          </article>
+        ))}
+      </div>
+    </section>
+  )}
 </MainLayout>

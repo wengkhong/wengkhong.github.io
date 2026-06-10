@@ -1,5 +1,10 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+
+const talks = await getCollection("talks");
+const upcoming = talks.filter((t) => t.data.type === "upcoming").sort((a, b) => a.data.date.localeCompare(b.data.date));
+const past = talks.filter((t) => t.data.type !== "upcoming").sort((a, b) => b.data.date.localeCompare(a.data.date));
 ---
 
 <MainLayout
@@ -14,19 +19,33 @@ import MainLayout from "../layouts/MainLayout.astro";
     </p>
   </header>
 
-  <section class="section card">
-    <h2>Recent Topics</h2>
-    <ul class="list-plain">
-      <li>AI-assisted variant interpretation in clinical pipelines</li>
-      <li>Population genomics for improved risk and diagnostic context</li>
-      <li>Bridging sequencing and diagnosis in healthcare systems</li>
-    </ul>
-  </section>
+  {upcoming.length > 0 && (
+    <section class="section">
+      <div class="section-header">
+        <h2>Upcoming</h2>
+      </div>
+      {upcoming.map((talk) => (
+        <article class="section card">
+          <h3>{talk.data.title}</h3>
+          <p class="eyebrow">{talk.data.venue}{talk.data.location ? ` · ${talk.data.location}` : ""}</p>
+          {talk.body && <p>{talk.body}</p>}
+        </article>
+      ))}
+    </section>
+  )}
 
-  <section class="section card">
-    <h2>Upcoming</h2>
-    <p>
-      Upcoming and newly confirmed talks will be listed here with venue, date, and presentation title.
-    </p>
-  </section>
+  {past.length > 0 && (
+    <section class="section">
+      <div class="section-header">
+        <h2>Recent Talks</h2>
+      </div>
+      {past.map((talk) => (
+        <article class="section card">
+          <h3>{talk.data.title}</h3>
+          <p class="eyebrow">{talk.data.venue}{talk.data.location ? ` · ${talk.data.location}` : ""}</p>
+          {talk.body && <p>{talk.body}</p>}
+        </article>
+      ))}
+    </section>
+  )}
 </MainLayout>

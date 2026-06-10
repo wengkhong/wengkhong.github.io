@@ -1,5 +1,22 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+
+const tools = await getCollection("tools");
+
+const categories: Record<string, string> = {
+  "variant-interpretation": "Variant Interpretation",
+  "genomic-analysis": "Genomic Analysis",
+  "ai": "AI & Data Science",
+  "other": "Other",
+};
+
+const grouped: Record<string, typeof tools> = {};
+for (const tool of tools) {
+  const cat = tool.data.category;
+  if (!grouped[cat]) grouped[cat] = [];
+  grouped[cat].push(tool);
+}
 ---
 
 <MainLayout
@@ -14,31 +31,25 @@ import MainLayout from "../layouts/MainLayout.astro";
     </p>
   </header>
 
-  <section class="section grid two">
-    <article class="card">
-      <h2>Variant Interpretation</h2>
-      <ul class="list-plain">
-        <li>Automated ACMG classification frameworks</li>
-        <li>Variant prioritisation pipelines</li>
-        <li>Clinical reporting tools</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <h2>Genomic Analysis</h2>
-      <ul class="list-plain">
-        <li>Population variant annotation workflows</li>
-        <li>Rare disease analysis pipelines</li>
-        <li>Integration with sequencing platforms</li>
-      </ul>
-    </article>
-  </section>
-
-  <section class="section card">
-    <h2>Ongoing Development</h2>
-    <ul class="list-plain">
-      <li>AI-assisted interpretation systems</li>
-      <li>Literature-driven phenotype extraction</li>
-    </ul>
-  </section>
+  {Object.entries(grouped).map(([cat, catTools]) => (
+    <section class="section">
+      <div class="section-header">
+        <h2>{categories[cat] || cat}</h2>
+      </div>
+      <div class="grid two">
+        {catTools.map((tool) => (
+          <article class="card">
+            <h3>
+              {tool.data.link
+                ? <a href={tool.data.link} target="_blank" rel="noopener noreferrer">{tool.data.name}</a>
+                : tool.data.name
+              }
+            </h3>
+            {tool.data.status === "development" && <p class="eyebrow">In development</p>}
+            {tool.body && <p>{tool.body}</p>}
+          </article>
+        ))}
+      </div>
+    </section>
+  ))}
 </MainLayout>

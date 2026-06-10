@@ -25,3 +25,7 @@ pnpm-debug.log*
 
 # Windows Zone Identifier artifacts
 *Zone.Identifier
+
+# Playwright test output
+test-results/
+playwright-report/
