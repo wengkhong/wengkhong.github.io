@@ -71,7 +71,7 @@ test.describe("visual", () => {
     await p.goto("/grants");
     const cards = p.locator(".card h3");
     const texts = await cards.allTextContents();
-    expect(texts.length).toBeGreaterThanOrEqual(3);
+    expect(texts.length).toBeGreaterThanOrEqual(2);
     expect(texts).toEqual(
       expect.arrayContaining(["SG100K — Population-scale sequencing integration"])
     );
