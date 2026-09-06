@@ -16,7 +16,7 @@ test.describe("navigation", () => {
     test(`page ${page.path} loads with correct heading`, async ({ page: p }) => {
       const resp = await p.goto(page.path);
       expect(resp?.status()).toBe(200);
-      await expect(p.locator("h1")).toContainText(page.heading);
+      await expect(p.locator("main h1")).toContainText(page.heading);
     });
   }
 
@@ -63,7 +63,7 @@ test.describe("visual", () => {
 
   test("publications from content collection are rendered", async ({ page: p }) => {
     await p.goto("/publications");
-    await expect(p.locator("h2")).toContainText("Lim WK et al.");
+    await expect(p.locator("main h2")).toContainText("Lim WK et al.");
     await expect(p.locator("text=Nature Communications")).toBeVisible();
   });
 
@@ -86,7 +86,7 @@ test.describe("visual", () => {
 
   test("tools from content collection are rendered by category", async ({ page: p }) => {
     await p.goto("/tools");
-    const headings = p.locator("h2");
+    const headings = p.locator("main h2");
     await expect(headings.first()).toBeVisible();
     const texts = await headings.allTextContents();
     expect(texts).toEqual(
