@@ -1,5 +1,8 @@
 # Website TODO
 
+> Status verified against the live repo (last check: after publications & homepage refresh).
+> Deployments are green; tests pass (20/20 locally).
+
 ## 🔧 Setup / Infrastructure
 - [x] Confirm GitHub Pages deployment is stable
 - [x] Verify base URL is correct for root domain (wengkhong.github.io)
@@ -8,78 +11,78 @@
 
 ## 🏠 Home Page
 - [x] Add name, title, and positioning statement
-- [x] Add 3–4 key highlights (SG100K, funding, papers)
-- [x] Add quick links (CV, Scholar, GitHub)
+- [x] Add key highlights (Key Contributions cards + Selected Work; the 4-card metrics grid was removed by request)
+- [x] Add quick links (Scholar, GitHub)
+- [ ] Add CV quick link (no CV asset exists yet — see Future: downloadable CV)
 - [x] Ensure clean above-the-fold layout
 
 ## 👤 About Page
 - [x] Write concise professional bio
-- [x] Add career trajectory (Intel → data science → genomics)
-- [x] Add research philosophy (science, AI, clinical translation)
+- [x] Add career trajectory
+- [x] Add research philosophy
 - [ ] Optional: teaching / leadership
 
 ## 🔬 Research Page (HIGH PRIORITY)
-- [ ] Structure into 4 themes:
-  - [x] Clinical Genomics
-  - [x] Population Genomics
-  - [x] AI & Computational Methods
-  - [x] Functional Genomics
+- [x] Structure into 4 themes (Clinical, Population, AI, Functional)
 - [x] Write short summaries for each
-- [ ] Add key outputs (papers/tools)
+- [ ] Add key outputs (papers/tools) — page currently has **no links** to papers, tools, or DOIs
 
-## 📚 Publications
-- [x] Add selected publications (5–10)
-- [ ] Link Google Scholar profile
-- [ ] Highlight SG10K Nature Comms paper
-- [ ] Add TMEM63B work (when ready)
+## 📚 Publications  ✅ expanded & verified
+- [x] Selected publications (10 entries, all metadata verified via Crossref/PubMed)
+- [x] Link Google Scholar profile
+- [x] Highlight SG10K_Med Nature Communications paper (senior author, featured)
+- [x] Add TMEM63B AJHG 2026 work
+- [x] Lead-author papers prioritised; role badges; DOI buttons
 
 ## 🛠 Tools / Software
-- [x] List internal tools (variant prioritisation, SEQR, AutoACMG)
-- [ ] Add GitHub links where possible
+- [x] List internal tools (7 entries)
+- [ ] Add GitHub links — **0 of 7 tools have links** (need user to confirm which projects are public / repo URLs)
 - [x] Keep descriptions concise
 
 ## 💰 Grants & Projects
-- [ ] List active grants (OF-IRG, etc.)
+- [x] List active grants (SG100K, PRISM — OF-IRG removed by request)
 - [ ] Add funding amounts (optional)
-- [ ] Highlight leadership roles (SG100K, PRISM)
+- [ ] Highlight leadership roles — only SG100K has `role: Program leadership`; PRISM entry lacks a role
 
 ## 🎤 Talks
-- [ ] Add recent invited talks
-- [ ] Add upcoming talks (APCHG, etc.)
-- [ ] Keep to key highlights only
+- [x] Add recent invited talks (3)
+- [x] Add upcoming talks (APCHG 2025)
+- [x] Keep to key highlights only
 
 ## 🤝 Collaborators (optional)
 - [ ] Add key collaborators (KKH, GIS, etc.)
-- [ ] Keep minimal
 
 ## 📬 Contact
-- [x] Add institutional email
+- [x] Add institutional email (obfuscated)
 - [x] Add links (Scholar, GitHub)
-- [x] Ensure no spam exposure (consider obfuscation)
+- [x] Ensure no spam exposure
 
 ## 🎨 Design / UX
-- [x] Keep minimal, academic style
-- [x] Ensure mobile responsiveness
-- [x] Improve typography (readability > aesthetics)
-- [x] Consistent spacing and layout
+- [x] Minimal, academic style
+- [x] Mobile responsiveness (900px breakpoint)
+- [x] Typography-first hierarchy
+- [x] Consistent spacing, compact publication cards
 
-## ⚡ Performance
-- [ ] Check build size
-- [ ] Ensure fast load times
-- [ ] Avoid heavy assets
+## ⚡ Performance — one clear win remains
+- [ ] Optimise hero image **WK_Profile.png = 1.1 MB** (832×1102 PNG) — ~84% of total page weight (1.3 MB). Resize/compress to ~40 KB JPEG (displayed at 200 px). References: `index.astro` hero + `MainLayout.astro` og:image
+- [x] No heavy non-image assets; single CSS file; no client JS
 
 ## 🔒 Security / CI
-- [ ] Pin GitHub Actions to commit SHA (not tags)
-- [ ] Review workflow permissions
-- [ ] Ensure no secrets exposed in repo
+- [ ] Pin GitHub Actions to commit SHA (workflow uses `checkout@v4`, `setup-node@v4`, `configure-pages@v5`, `upload-pages-artifact@v3`, `deploy-pages@v4` tags)
+- [x] Review workflow permissions (minimal: read contents, write pages, id-token)
+- [x] No secrets in repo
 
 ## 🧹 Cleanup
-- [ ] Remove unused files
-- [ ] Clean up .gitignore if needed
-- [ ] Standardise naming conventions
+- [ ] Remove unused public assets (5 files, zero references in src/):
+  - `public/logos/duke-nus.svg`, `public/logos/gis.svg`, `public/logos/singhealth-duke-nus.svg`
+  - `public/favicon.svg` (layout uses `favicon.ico`)
+  - `public/singhealth-dukenus-clean.svg`
+- [x] .gitignore covers dist/, .astro/, node_modules/, test-results/
+- [x] Naming conventions standardised (kebab-case data files)
 
 ## 🚀 Future Enhancements
 - [ ] Add blog / notes section (optional)
 - [ ] Add case studies (variant interpretation examples)
-- [ ] Add downloadable CV (PDF)
+- [ ] Add downloadable CV (PDF) — also unlocks Home-page CV link
 - [ ] Add media / press section
+- [ ] Consider h-index / citation metric (if desired — currently intentionally absent)
