@@ -4,7 +4,6 @@ authors: "Seow SW, Mina T, Hebrard M, et al."
 journal: "Nature Genetics"
 year: 2026
 doi: "10.1038/s41588-026-02687-8"
-featured: true
 volume: "58"
 issue: "8"
 pages: "1760-1772"

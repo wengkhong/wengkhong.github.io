@@ -414,13 +414,24 @@ main {
 }
 
 /* Publication cards */
+.pub-card {
+  padding: 0.85rem 1rem;
+  margin-bottom: var(--spacing-2);
+}
+
 .pub-card.featured {
   border-color: var(--accent-2);
   box-shadow: inset 3px 0 0 var(--accent-2);
 }
 
+.pub-card .eyebrow {
+  margin-bottom: 0.4rem;
+  font-size: 0.72rem;
+}
+
 .pub-authors {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.25rem;
+  font-size: 1.08rem;
 }
 
 .pub-own {
@@ -429,32 +440,33 @@ main {
 }
 
 .pub-title {
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.2rem;
   color: var(--ink-muted);
+  font-size: 0.93rem;
 }
 
 .pub-journal {
   color: var(--ink-soft);
-  font-size: 0.92rem;
-  margin-bottom: 0.6rem;
+  font-size: 0.84rem;
+  margin-bottom: 0.45rem;
 }
 
 .pub-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
-  margin: 0 0 0.7rem;
+  gap: 0.35rem;
+  margin: 0 0 0.5rem;
   padding: 0;
   list-style: none;
 }
 
 .badge {
-  padding: 0.25rem 0.6rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 999px;
   border: 1px solid var(--border);
   background: var(--surface-soft);
   color: #33404a;
-  font-size: 0.78rem;
+  font-size: 0.7rem;
   letter-spacing: 0.02em;
 }
 
@@ -464,8 +476,9 @@ main {
 }
 
 .pub-summary {
-  margin: 0 0 0.7rem;
+  margin: 0 0 0.5rem;
   max-width: 72ch;
+  font-size: 0.9rem;
 }
 
 .pub-doi {
@@ -473,8 +486,8 @@ main {
 }
 
 .pub-doi .button-link {
-  padding: 0.45rem 0.9rem;
-  font-size: 0.84rem;
+  padding: 0.38rem 0.8rem;
+  font-size: 0.78rem;
 }
 
 .list-plain {

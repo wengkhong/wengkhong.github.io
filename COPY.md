@@ -188,30 +188,39 @@ To reduce the gap between sequencing and diagnosis by combining:
 
 Selected publications: clinically relevant variant interpretation in ancestrally diverse Asian populations, population-scale sequencing, and translational genomics.
 
-## Selected (Featured)
-
-**Seow SW, Mina T, Hebrard M, et al. (2026)**  
-Translating genomic data into healthcare practice with the Singapore National Precision Medicine program  
-*Nature Genetics* 58(8):1760-1772  
-- Weng Khong Lim: contributing author (byline 249/269); SG100K phase-II, 102,202 genomes
+## Lead-Author Publications (first / co-first / senior / co-senior)
 
 **Chan SH, Bylstra Y, Teo JX, et al. (2022)**  
 Analysis of clinically relevant variants from ancestrally diverse Asian genomes  
 *Nature Communications* 13:6694  
 - 9,051 genomes from East, South, Southeast Asian ancestries  
-- Identified population-specific pathogenic variants  
-- Highlighted gaps in current screening panels  
-- Weng Khong Lim: senior (last) author
+- Identified population-specific pathogenic variants; screening panel gaps  
+- Weng Khong Lim: senior (last) & corresponding author | SG10K_Med
+
+**Chan SH, Iness AN, Rosenfeld JA, et al. (2026)**  
+Bi-allelic loss-of-function variants in TMEM63B cause syndromic surfactant dysfunction disorder  
+*The American Journal of Human Genetics*. doi:10.1016/j.ajhg.2026.05.008  
+- Weng Khong Lim: co-senior author
+
+**Lieviant JA, Chan CM, Bylstra Y, et al. (2025)**  
+Determinants of diagnostic yield in a multi-ethnic Asian inherited retinal disease cohort  
+*European Journal of Human Genetics* 33(12):1627-1635. doi:10.1038/s41431-025-01833-w  
+- WES of 506 IRD probands; 49.2% diagnostic yield  
+- Weng Khong Lim: senior (last) & corresponding author
+
+**Lim WK, Ong CK, Tan J, et al. (2014)**  
+Exome sequencing identifies highly recurrent MED12 somatic mutations in breast fibroadenoma  
+*Nature Genetics* 46(8):877-880. doi:10.1038/ng.3037  
+- First author
 
 ## Other Selected Publications
 
-1. Wong E, Bertin N, Hebrard M, Tirado-Magallanes R, Bellis C, **Lim WK**, et al. (2023) The Singapore National Precision Medicine Strategy. *Nature Genetics* 55(2):178-186. doi:10.1038/s41588-022-01274-x
+1. Seow SW, Mina T, Hebrard M, et al. (2026) Translating genomic data into healthcare practice with the Singapore National Precision Medicine program. *Nature Genetics* 58(8):1760-1772. doi:10.1038/s41588-026-02687-8 — SG100K, contributing author
 2. Tan JHJ, Li Z, Porta MG, Rajaby R, **Lim WK**, et al. (2024) A Catalogue of Structural Variation across Ancestrally Diverse Asian Genomes. *Nature Communications* 15:9507. doi:10.1038/s41467-024-53620-8
-3. Jusakul A, Cutcutache I, Yong CH, et al. (2017) Whole-Genome and Epigenomic Landscapes of Etiologically Distinct Subtypes of Cholangiocarcinoma. *Cancer Discovery* 7(10):1116-1135. doi:10.1158/2159-8290.CD-17-0368
-4. **Lim WK**, Ong CK, Tan J, et al. (2014) Exome sequencing identifies highly recurrent MED12 somatic mutations in breast fibroadenoma. *Nature Genetics* 46(8):877-880. doi:10.1038/ng.3037 — First author
-5. Tan J, Ong CK, **Lim WK**, et al. (2015) Genomic landscapes of breast fibroepithelial tumors. *Nature Genetics* 47(11):1341-1345. doi:10.1038/ng.3409
-6. Bylstra Y, **Lim WK**, Kam S, et al. (2021) Family history assessment significantly enhances delivery of precision medicine in the genomics era. *Genome Medicine* 13:3. doi:10.1186/s13073-020-00819-1
-7. Chan SH, Iness AN, Rosenfeld JA, et al. (2026) Bi-allelic loss-of-function variants in TMEM63B cause syndromic surfactant dysfunction disorder. *The American Journal of Human Genetics*. doi:10.1016/j.ajhg.2026.05.008
+3. Wong E, Bertin N, Hebrard M, Tirado-Magallanes R, Bellis C, **Lim WK**, et al. (2023) The Singapore National Precision Medicine Strategy. *Nature Genetics* 55(2):178-186. doi:10.1038/s41588-022-01274-x
+4. Bylstra Y, **Lim WK**, Kam S, et al. (2021) Family history assessment significantly enhances delivery of precision medicine in the genomics era. *Genome Medicine* 13:3. doi:10.1186/s13073-020-00819-1
+5. Jusakul A, Cutcutache I, Yong CH, et al. (2017) Whole-Genome and Epigenomic Landscapes of Etiologically Distinct Subtypes of Cholangiocarcinoma. *Cancer Discovery* 7(10):1116-1135. doi:10.1158/2159-8290.CD-17-0368
+6. Tan J, Ong CK, **Lim WK**, et al. (2015) Genomic landscapes of breast fibroepithelial tumors. *Nature Genetics* 47(11):1341-1345. doi:10.1038/ng.3409
 
 Additional publications available on:
 

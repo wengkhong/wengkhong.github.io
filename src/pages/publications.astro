@@ -3,11 +3,18 @@ import MainLayout from "../layouts/MainLayout.astro";
 import { getCollection } from "astro:content";
 
 const publications = await getCollection("publications");
-const sorted = publications.sort((a, b) => b.data.year - a.data.year);
+const sorted = publications.sort((a, b) => {
+  const pa = a.data.priority ?? 99;
+  const pb = b.data.priority ?? 99;
+  if (pa !== pb) return pa - pb;
+  return b.data.year - a.data.year;
+});
 
 const roleLabels: Record<string, string> = {
   first: "First author",
+  cofirst: "Co-first author",
   senior: "Senior author",
+  cosenior: "Co-senior author",
   contributor: "Contributing author",
 };
 
@@ -38,7 +45,7 @@ function highlightOwnName(authors: string) {
 
   {sorted.map((pub) => (
     <section class={"section card pub-card" + (pub.data.featured ? " featured" : "")}>
-      <p class="eyebrow">{pub.data.featured ? "Selected" : "Publication"}</p>
+      <p class="eyebrow">{pub.data.featured ? "Selected" : ""}</p>
       <h2 class="pub-authors" set:html={`${highlightOwnName(pub.data.authors)} (${pub.data.year})`} />
       <p class="pub-title">{pub.data.title}.</p>
       <p class="pub-journal" set:html={formatCitation(pub)} />

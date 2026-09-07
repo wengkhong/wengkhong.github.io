@@ -64,8 +64,8 @@ test.describe("visual", () => {
   test("publications from content collection are rendered", async ({ page: p }) => {
     await p.goto("/publications");
     const cards = p.locator(".pub-card");
-    expect(await cards.count()).toBeGreaterThanOrEqual(5);
-    await expect(p.locator(".pub-card").first()).toContainText("Nature Genetics");
+    expect(await cards.count()).toBeGreaterThanOrEqual(10);
+    await expect(cards.first()).toContainText("Nature Communications");
     await expect(p.locator("main")).toContainText(
       "Analysis of clinically relevant variants from ancestrally diverse Asian genomes"
     );

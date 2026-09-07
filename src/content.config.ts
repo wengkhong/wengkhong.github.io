@@ -11,10 +11,17 @@ const publications = defineCollection({
     doi: z.string().optional(),
     link: z.string().url().optional(),
     featured: z.boolean().default(false),
+    priority: z.number().optional(),
     volume: z.string().optional(),
     issue: z.string().optional(),
     pages: z.string().optional(),
-    role: z.enum(["first", "senior", "contributor"]).optional(),
+    role: z.enum([
+      "first",
+      "cofirst",
+      "senior",
+      "cosenior",
+      "contributor",
+    ]).optional(),
     note: z.string().optional(),
   }),
 });
