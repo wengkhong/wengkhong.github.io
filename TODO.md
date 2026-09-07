@@ -25,7 +25,7 @@
 ## 🔬 Research Page (HIGH PRIORITY)
 - [x] Structure into 4 themes (Clinical, Population, AI, Functional)
 - [x] Write short summaries for each
-- [ ] Add key outputs (papers/tools) — page currently has **no links** to papers, tools, or DOIs
+- [x] Add key outputs — new data-driven "Key Outputs" section links flagship papers (DOIs) and all tools
 
 ## 📚 Publications  ✅ expanded & verified
 - [x] Selected publications (10 entries, all metadata verified via Crossref/PubMed)
@@ -63,20 +63,17 @@
 - [x] Typography-first hierarchy
 - [x] Consistent spacing, compact publication cards
 
-## ⚡ Performance — one clear win remains
-- [ ] Optimise hero image **WK_Profile.png = 1.1 MB** (832×1102 PNG) — ~84% of total page weight (1.3 MB). Resize/compress to ~40 KB JPEG (displayed at 200 px). References: `index.astro` hero + `MainLayout.astro` og:image
+## ⚡ Performance
+- [x] Optimise hero image — WK_Profile.png (1.1 MB) → WK_Profile.jpg (31 KB, 422×560); total site 1.3 MB → 208 KB
 - [x] No heavy non-image assets; single CSS file; no client JS
 
 ## 🔒 Security / CI
-- [ ] Pin GitHub Actions to commit SHA (workflow uses `checkout@v4`, `setup-node@v4`, `configure-pages@v5`, `upload-pages-artifact@v3`, `deploy-pages@v4` tags)
+- [x] Pin GitHub Actions to commit SHA (checkout, setup-node, configure-pages, upload-pages-artifact, deploy-pages — all pinned with version comments)
 - [x] Review workflow permissions (minimal: read contents, write pages, id-token)
 - [x] No secrets in repo
 
 ## 🧹 Cleanup
-- [ ] Remove unused public assets (5 files, zero references in src/):
-  - `public/logos/duke-nus.svg`, `public/logos/gis.svg`, `public/logos/singhealth-duke-nus.svg`
-  - `public/favicon.svg` (layout uses `favicon.ico`)
-  - `public/singhealth-dukenus-clean.svg`
+- [x] Remove unused public assets (5 files removed: logos/duke-nus.svg, logos/gis.svg, logos/singhealth-duke-nus.svg, favicon.svg, singhealth-dukenus-clean.svg)
 - [x] .gitignore covers dist/, .astro/, node_modules/, test-results/
 - [x] Naming conventions standardised (kebab-case data files)
 

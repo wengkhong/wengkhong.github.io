@@ -1,5 +1,12 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+
+const publications = await getCollection("publications");
+const flagship = publications
+  .filter((p) => p.data.priority !== undefined)
+  .sort((a, b) => (a.data.priority ?? 99) - (b.data.priority ?? 99));
+const tools = await getCollection("tools");
 ---
 
 <MainLayout
@@ -54,6 +61,46 @@ import MainLayout from "../layouts/MainLayout.astro";
         <li>Multi-omics approaches</li>
       </ul>
     </article>
+  </section>
+
+  <section class="section">
+    <div class="section-header">
+      <h2>Key Outputs</h2>
+    </div>
+    <div class="grid two">
+      <article class="card">
+        <h3>Selected Publications</h3>
+        <ul class="list-plain">
+          {flagship.map((p) => (
+            <li>
+              {p.data.doi ? (
+                <a href={`https://doi.org/${p.data.doi}`} target="_blank" rel="noopener noreferrer">
+                  <em>{p.data.journal}</em> ({p.data.year}) — {p.data.title}
+                </a>
+              ) : (
+                <>
+                  <em>{p.data.journal}</em> ({p.data.year}) — {p.data.title}
+                </>
+              )}
+            </li>
+          ))}
+        </ul>
+        <p>
+          <a class="button-link secondary" href="/publications">All publications</a>
+        </p>
+      </article>
+      <article class="card">
+        <h3>Software & Tools</h3>
+        <ul class="list-plain">
+          {tools.map((t) => (
+            <li>{t.data.name}</li>
+          ))}
+        </ul>
+        <p>
+          <a class="button-link secondary" href="/tools">All tools</a>
+        </p>
+      </article>
+    </div>
   </section>
 
   <section class="section card">
