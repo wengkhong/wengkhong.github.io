@@ -45,13 +45,6 @@ test.describe("visual", () => {
     await expect(p.locator(".hero-photo")).toBeVisible();
   });
 
-  test("metrics grid displayed on homepage", async ({ page: p }) => {
-    await p.goto("/");
-    await expect(p.locator(".metrics-grid")).toBeVisible();
-    const metrics = p.locator(".metric");
-    expect(await metrics.count()).toBe(4);
-  });
-
   test("research cards are present", async ({ page: p }) => {
     await p.goto("/research");
     const cards = p.locator(".card h2");

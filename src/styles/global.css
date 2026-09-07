@@ -331,35 +331,6 @@ main {
   margin-top: var(--spacing-3);
 }
 
-.metrics-grid {
-  margin: 0 0 var(--spacing-6);
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.75rem;
-}
-
-.metric {
-  padding: 0.9rem;
-  border-radius: 10px;
-  border: 1px solid var(--border);
-  background: color-mix(in srgb, #ffffff 88%, #f2f0e8 12%);
-}
-
-.metric-value {
-  display: block;
-  color: #101417;
-  font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
-  font-size: 1.15rem;
-  font-weight: 700;
-}
-
-.metric-label {
-  display: block;
-  color: var(--ink-soft);
-  font-size: 0.82rem;
-  letter-spacing: 0.01em;
-}
-
 .button-link {
   display: inline-flex;
   align-items: center;
@@ -581,9 +552,5 @@ main {
   .nav-more-list {
     right: auto;
     left: 0;
-  }
-
-  .metrics-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

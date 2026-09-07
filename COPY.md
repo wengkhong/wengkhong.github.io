@@ -37,7 +37,7 @@ Focus on closing the gap between sequencing and diagnosis, particularly in rare 
 
 ## Selected Work
 
-- *Nature Communications (2022)* — Analysis of clinically relevant variants in 9,051 Asian genomes (SG10K_Med, senior author)  
+- *Nature Communications (2022)* — Analysis of clinically relevant variants in 9,051 Asian genomes  
 - *Nature Genetics (2026)* — Translating genomic data into healthcare practice (SG100K)  
 - *American Journal of Human Genetics (2026)* — Bi-allelic TMEM63B loss-of-function surfactant disorder  
 - *European Journal of Human Genetics (2025)* — Diagnostic yield in inherited retinal disease  
