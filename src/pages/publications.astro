@@ -3,8 +3,25 @@ import MainLayout from "../layouts/MainLayout.astro";
 import { getCollection } from "astro:content";
 
 const publications = await getCollection("publications");
-const featured = publications.filter((p) => p.data.featured);
 const sorted = publications.sort((a, b) => b.data.year - a.data.year);
+
+const roleLabels: Record<string, string> = {
+  first: "First author",
+  senior: "Senior author",
+  contributor: "Contributing author",
+};
+
+function formatCitation(pub: (typeof publications)[number]) {
+  const d = pub.data;
+  const bits: string[] = [];
+  if (d.volume) bits.push(d.volume + (d.issue ? `(${d.issue})` : "") + (d.pages ? `:${d.pages}` : ""));
+  return bits.length ? `<em> ${d.journal}</em>, ${bits.join("")}.` : `<em> ${d.journal}</em>.`;
+}
+
+function highlightOwnName(authors: string) {
+  // Bold "Lim WK" wherever it appears in the author string.
+  return authors.replace(/Lim WK\b/g, "<strong class=\"pub-own\">Lim WK</strong>");
+}
 ---
 
 <MainLayout
@@ -14,39 +31,40 @@ const sorted = publications.sort((a, b) => b.data.year - a.data.year);
   <header class="section">
     <h1 class="page-title">Publications</h1>
     <p class="page-intro">
-      Selected work focused on clinically relevant variant interpretation in ancestrally diverse Asian
-      populations and translational genomics.
+      Selected publications: clinically relevant variant interpretation in ancestrally diverse Asian
+      populations, population-scale sequencing, and translational genomics.
     </p>
   </header>
 
-  {featured.map((pub) => (
-    <section class="section card">
-      <p class="eyebrow">Selected Publication</p>
-      <h2>{pub.data.authors} ({pub.data.year})</h2>
-      <p>
-        {pub.data.title}.
-        <em> {pub.data.journal}</em>.
-      </p>
-      {pub.body && <p>{pub.body}</p>}
+  {sorted.map((pub) => (
+    <section class={"section card pub-card" + (pub.data.featured ? " featured" : "")}>
+      <p class="eyebrow">{pub.data.featured ? "Selected" : "Publication"}</p>
+      <h2 class="pub-authors" set:html={`${highlightOwnName(pub.data.authors)} (${pub.data.year})`} />
+      <p class="pub-title">{pub.data.title}.</p>
+      <p class="pub-journal" set:html={formatCitation(pub)} />
+      <ul class="pub-tags">
+        {pub.data.role && <li class="badge">{roleLabels[pub.data.role]}</li>}
+        {pub.data.note && <li class="badge badge-note">{pub.data.note}</li>}
+      </ul>
+      {pub.body && <p class="pub-summary">{pub.body}</p>}
+      {pub.data.doi && (
+        <p class="pub-doi">
+          <a
+            class="button-link secondary"
+            href={`https://doi.org/${pub.data.doi}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            DOI {pub.data.doi}
+          </a>
+        </p>
+      )}
     </section>
   ))}
 
-  {sorted.length > 1 && (
-    <section class="section card">
-      <h3>All Publications</h3>
-      <ul class="list-plain">
-        {sorted.map((pub) => (
-          <li>
-            {pub.data.authors} ({pub.data.year}). {pub.data.title}. <em>{pub.data.journal}</em>.
-          </li>
-        ))}
-      </ul>
-    </section>
-  )}
-
   <section class="section card">
-    <h3>More Publications</h3>
-    <p>Additional publications are available on Google Scholar.</p>
+    <h3>Full Publication List</h3>
+    <p>Additional publications (including consortium and collaborative work) are available on Google Scholar.</p>
     <p>
       <a class="button-link secondary" href="https://scholar.google.com/citations?user=8lU-rEkAAAAJ&hl=en" aria-label="Google Scholar profile" target="_blank" rel="noopener noreferrer">
         Google Scholar

@@ -63,8 +63,14 @@ test.describe("visual", () => {
 
   test("publications from content collection are rendered", async ({ page: p }) => {
     await p.goto("/publications");
-    await expect(p.locator("main h2")).toContainText("Lim WK et al.");
-    await expect(p.locator("text=Nature Communications")).toBeVisible();
+    const cards = p.locator(".pub-card");
+    expect(await cards.count()).toBeGreaterThanOrEqual(5);
+    await expect(p.locator(".pub-card").first()).toContainText("Nature Genetics");
+    await expect(p.locator("main")).toContainText(
+      "Analysis of clinically relevant variants from ancestrally diverse Asian genomes"
+    );
+    await expect(p.locator("main")).toContainText("TMEM63B");
+    await expect(p.locator("a[href^='https://doi.org/']").first()).toBeVisible();
   });
 
   test("grants from content collection are rendered", async ({ page: p }) => {

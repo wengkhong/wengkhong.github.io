@@ -186,17 +186,32 @@ To reduce the gap between sequencing and diagnosis by combining:
 📚 Publications Page (Short Version)
 # Publications
 
-## Selected Publications
+Selected publications: clinically relevant variant interpretation in ancestrally diverse Asian populations, population-scale sequencing, and translational genomics.
 
-**Lim WK et al. (2022)**  
+## Selected (Featured)
+
+**Seow SW, Mina T, Hebrard M, et al. (2026)**  
+Translating genomic data into healthcare practice with the Singapore National Precision Medicine program  
+*Nature Genetics* 58(8):1760-1772  
+- Weng Khong Lim: contributing author (byline 249/269); SG100K phase-II, 102,202 genomes
+
+**Chan SH, Bylstra Y, Teo JX, et al. (2022)**  
 Analysis of clinically relevant variants from ancestrally diverse Asian genomes  
-*Nature Communications*
-
-- 9,000+ whole genomes analysed  
+*Nature Communications* 13:6694  
+- 9,051 genomes from East, South, Southeast Asian ancestries  
 - Identified population-specific pathogenic variants  
 - Highlighted gaps in current screening panels  
+- Weng Khong Lim: senior (last) author
 
----
+## Other Selected Publications
+
+1. Wong E, Bertin N, Hebrard M, Tirado-Magallanes R, Bellis C, **Lim WK**, et al. (2023) The Singapore National Precision Medicine Strategy. *Nature Genetics* 55(2):178-186. doi:10.1038/s41588-022-01274-x
+2. Tan JHJ, Li Z, Porta MG, Rajaby R, **Lim WK**, et al. (2024) A Catalogue of Structural Variation across Ancestrally Diverse Asian Genomes. *Nature Communications* 15:9507. doi:10.1038/s41467-024-53620-8
+3. Jusakul A, Cutcutache I, Yong CH, et al. (2017) Whole-Genome and Epigenomic Landscapes of Etiologically Distinct Subtypes of Cholangiocarcinoma. *Cancer Discovery* 7(10):1116-1135. doi:10.1158/2159-8290.CD-17-0368
+4. **Lim WK**, Ong CK, Tan J, et al. (2014) Exome sequencing identifies highly recurrent MED12 somatic mutations in breast fibroadenoma. *Nature Genetics* 46(8):877-880. doi:10.1038/ng.3037 — First author
+5. Tan J, Ong CK, **Lim WK**, et al. (2015) Genomic landscapes of breast fibroepithelial tumors. *Nature Genetics* 47(11):1341-1345. doi:10.1038/ng.3409
+6. Bylstra Y, **Lim WK**, Kam S, et al. (2021) Family history assessment significantly enhances delivery of precision medicine in the genomics era. *Genome Medicine* 13:3. doi:10.1186/s13073-020-00819-1
+7. Chan SH, Iness AN, Rosenfeld JA, et al. (2026) Bi-allelic loss-of-function variants in TMEM63B cause syndromic surfactant dysfunction disorder. *The American Journal of Human Genetics*. doi:10.1016/j.ajhg.2026.05.008
 
 Additional publications available on:
 

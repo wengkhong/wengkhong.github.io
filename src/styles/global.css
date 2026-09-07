@@ -413,6 +413,70 @@ main {
   margin-bottom: 0;
 }
 
+/* Publication cards */
+.pub-card.featured {
+  border-color: var(--accent-2);
+  box-shadow: inset 3px 0 0 var(--accent-2);
+}
+
+.pub-authors {
+  margin-bottom: 0.35rem;
+}
+
+.pub-own {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.pub-title {
+  margin: 0 0 0.35rem;
+  color: var(--ink-muted);
+}
+
+.pub-journal {
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+  margin-bottom: 0.6rem;
+}
+
+.pub-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0 0 0.7rem;
+  padding: 0;
+  list-style: none;
+}
+
+.badge {
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-soft);
+  color: #33404a;
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
+}
+
+.badge-note {
+  background: transparent;
+  color: var(--ink-soft);
+}
+
+.pub-summary {
+  margin: 0 0 0.7rem;
+  max-width: 72ch;
+}
+
+.pub-doi {
+  margin: 0;
+}
+
+.pub-doi .button-link {
+  padding: 0.45rem 0.9rem;
+  font-size: 0.84rem;
+}
+
 .list-plain {
   margin: 0;
   padding-left: 1.15rem;

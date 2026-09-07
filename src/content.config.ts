@@ -11,6 +11,11 @@ const publications = defineCollection({
     doi: z.string().optional(),
     link: z.string().url().optional(),
     featured: z.boolean().default(false),
+    volume: z.string().optional(),
+    issue: z.string().optional(),
+    pages: z.string().optional(),
+    role: z.enum(["first", "senior", "contributor"]).optional(),
+    note: z.string().optional(),
   }),
 });
 
